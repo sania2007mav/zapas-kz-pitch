@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запас.KZ — автозаказ и аналитика для Розницы 2.3</title>
+  <meta name="description" content="Предложение: своя разработка автозаказа, прогноза спроса и аналитики магазина для 1С:Розница 2.3 Казахстан." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="logo" href="#top">Запас<span>.KZ</span></a>
+    <nav class="nav">
+      <a href="#problem">Проблема</a>
+      <a href="#modules">Модули</a>
+      <a href="#architecture">Архитектура</a>
+      <a href="#roadmap">План</a>
+    </nav>
+    <a class="btn btn-sm" href="#next">Обсудить</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Предложение для руководства</p>
+        <h1>Запас<span>.KZ</span></h1>
+        <p class="lead">Автозаказ, прогноз спроса и аналитика магазина под <strong>1С:Розница 2.3 для Казахстана</strong> — там, где типовой «1С-Товары» работает некорректно.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#modules">Что можем сделать</a>
+          <a class="btn btn-ghost" href="#roadmap">Этапы внедрения</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="panel p1">
+            <span>Мин. остаток</span>
+            <strong>12</strong>
+          </div>
+          <div class="panel p2">
+            <span>Прогноз / день</span>
+            <strong>4.8</strong>
+          </div>
+          <div class="panel p3">
+            <span>Заявка</span>
+            <strong>готово</strong>
+          </div>
+          <div class="core">
+            <span>Розница</span>
+            <b>2.3 KZ</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section problem">
+      <div class="section-head">
+        <h2>Почему нужна своя разработка</h2>
+        <p>Сервис «1С-Товары» рассчитан на российскую Розницу 2.2. На Рознице 2.3 для Казахстана адаптер метаданных ломается — заказы и выгрузки работают нестабильно.</p>
+      </div>
+      <div class="split">
+        <article>
+          <h3>Сейчас</h3>
+          <ul>
+            <li>Зависимость от облака и тарифов портала 1С</li>
+            <li>Общий адаптер без учёта KZ-метаданных 2.3</li>
+            <li>Риск остановки автозаказа при обновлениях</li>
+          </ul>
+        </article>
+        <article class="accent">
+          <h3>Предлагаем</h3>
+          <ul>
+            <li>Свой контур под вашу конфигурацию Розница 2.3 KZ</li>
+            <li>Контроль логики прогноза и заявок</li>
+            <li>Мобильная аналитика для руководителя</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="modules" class="section modules">
+      <div class="section-head">
+        <h2>Функциональные блоки</h2>
+        <p>Тот же бизнес-результат, что у «1С-Товары», но на нашей реализации и с поддержкой вашей базы.</p>
+      </div>
+      <div class="module-grid">
+        <article>
+          <span class="num">01</span>
+          <h3>Обмен с 1С</h3>
+          <p>Выгрузка продаж и остатков, закрытие дня, регламентные задания. Работает с объектами Розницы 2.3 KZ.</p>
+        </article>
+        <article>
+          <span class="num">02</span>
+          <h3>Прогноз спроса</h3>
+          <p>Среднедневной расход с учётом тренда, сезонности и дней с нулевым остатком.</p>
+        </article>
+        <article>
+          <span class="num">03</span>
+          <h3>Автозаказ</h3>
+          <p>Ассортиментная матрица: мин. остаток, партия, сценарии заказа, заявки поставщикам.</p>
+        </article>
+        <article>
+          <span class="num">04</span>
+          <h3>Аналитика</h3>
+          <p>Выручка, средний чек, оборачиваемость, дефицит и излишки — «приборная панель» магазина.</p>
+        </article>
+        <article>
+          <span class="num">05</span>
+          <h3>Каталог / штрихкоды</h3>
+          <p>Ускоренное заведение номенклатуры и сопоставление карточек при запуске точки.</p>
+        </article>
+        <article>
+          <span class="num">06</span>
+          <h3>Мобильный доступ</h3>
+          <p>Android / веб: контроль показателей с телефона без входа в толстый клиент 1С.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="section architecture">
+      <div class="section-head">
+        <h2>Архитектура решения</h2>
+        <p>Три слоя — как у зрелого retail-сервиса, но под ваш контур.</p>
+      </div>
+      <ol class="arch">
+        <li>
+          <strong>Обработка / расширение в 1С</strong>
+          <span>Сбор данных из Розницы 2.3 KZ, UI товароведа, формирование заявок</span>
+        </li>
+        <li>
+          <strong>Сервер расчётов</strong>
+          <span>Прогноз, матрица, хранение истории, API для мобильного клиента</span>
+        </li>
+        <li>
+          <strong>Мобильное приложение</strong>
+          <span>Дашборд руководителя: выручка, остатки, алерты по дефициту</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+      <div class="section-head">
+        <h2>План работ</h2>
+        <p>Можно стартовать с MVP автозаказа и наращивать аналитику.</p>
+      </div>
+      <div class="timeline">
+        <div>
+          <time>Этап 1</time>
+          <h3>MVP · 3–4 недели</h3>
+          <p>Адаптер Розница 2.3 KZ, выгрузка дня, расчёт мин. остатка и партии, ручная заявка.</p>
+        </div>
+        <div>
+          <time>Этап 2</time>
+          <h3>Автозаказ · 2–3 недели</h3>
+          <p>Сценарии заказа, поставщики, email/обмен заявками, регламентная выгрузка.</p>
+        </div>
+        <div>
+          <time>Этап 3</time>
+          <h3>Аналитика + мобильный · 3–4 недели</h3>
+          <p>Дашборд, ABC, алерты Ритейл-Чекер, Android/web для руководителя.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="section next">
+      <div class="next-card">
+        <h2>Готовы показать прототип на вашей базе</h2>
+        <p>Разберём конфигурацию Розница 2.3 KZ, зафиксируем перечень объектов обмена и соберём пилот на 1 магазине.</p>
+        <ul class="checks">
+          <li>Без привязки к тарифам «1С-Товары»</li>
+          <li>Код и логика — под вашим контролем</li>
+          <li>Масштабирование на сеть магазинов</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Запас.KZ · концепт для презентации руководству</span>
+    <span>На базе анализа сервиса «1С-Товары» и обработки для магазина</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
